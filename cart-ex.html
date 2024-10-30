@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>التجارة الالكترونية</title>
+        <!-- <link rel="icon" href="public/img/aousla.icon"> -->
+        <link rel="stylesheet" href="public/css/tailwind.css">
+        <!-- font awsome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <!-- Google font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Akar Icons link -->
+        <script src="https://unpkg.com/akar-icons-fonts"></script>
+        <!-- ==== WOW JS ==== -->
+        <script src="public/js/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+        <!-- swiper js  -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <style>
+            .swiper-container {
+                overflow-x: hidden;
+            }
+            
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+            #spinner {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        }
+    
+        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        }
+        </style>
+        <!-- svg animations -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+<body>
+    <div class="flex gap-4 md:gap-8 flex-wrap w-full justify-center ">
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+        <div class="card w-40 md:w-64 bg-base-300  shadow-xl yelative group ">
+            <span class="bg-info absolute top-24 mt-3 md:mt-0 right-0 md:right-auto md:left-1 md:top-3 rounded-full px-2 mx-2 text-sm ">جديد</span>
+            <figure class="p-0 md:px-10 md:pt-10 ">
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-lg " />
+            </figure>
+            <div class="hidden group-hover:flex w-full justify-center gap-2 absolute px-3 z-10 top-20 md:top-32">
+                <button class="btn btn-square btn-sm" onclick="my_modal_4.showModal()">
+                    <i class="ai-eye-open" ></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-heart"></i>
+                </button>
+                <button class="btn btn-square btn-sm">
+                    <i class="ai-whatsapp-fill"></i>
+                </button>
+            </div>
+            <div class="card-body mt-0 p-2 md:p-10 ">
+                <p class="text-sm hidden md:block">type of products</p>
+              <h2 class="card-title text-lg">Shoes!</h2>
+              <div class="rating rating-sm items-center">
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400 " />
+                    <span class="px-3 text-sm"> (456)</span>
+              </div>
+              <div class="card-actions justify-between items-center">
+                <span class="text-lg font-bold">$34</span>
+                <button class="btn btn-sm bg-green-500">
+                    <i class="ai-cart"></i>
+                    <span class="hidden md:inline-block">اضافة</span>
+                  </button>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

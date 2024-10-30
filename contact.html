@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>التواصل</title>
+        <!-- <link rel="icon" href="public/img/aousla.icon"> -->
+        <link rel="stylesheet" href="public/css/tailwind.css">
+        <!-- font awsome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <!-- Google font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Akar Icons link -->
+        <script src="https://unpkg.com/akar-icons-fonts"></script>
+        <!-- ==== WOW JS ==== -->
+        <script src="public/js/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+        <!-- swiper js  -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <style>
+            .swiper-container {
+                overflow-x: hidden;
+            }
+            
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+		#spinner {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 9999;
+		}
+
+		.overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 9998;
+		}
+        </style>
+        <!-- svg animations -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+<body>
+    <header class="px-2 md:px-5 pt-2 ">
+        <div class="navbar bg-base-200 rounded-box flex-col md:flex-row">
+            <div class="flex-1 px-2 lg:flex-none">
+              <p class="text-md font-semibold">افضل العروض بافضل الاتمنه</p>
+              <label class="swap swap-active text-4xl">
+                <picture>
+					<source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.webp" type="image/webp">
+					<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.gif" alt="🥳" width="32" height="32">
+				</picture>
+              </label>
+            </div> 
+            <div class="flex justify-end flex-1 px-2">
+              <div class="flex items-stretch">
+                <div class="dropdown dropdown-end">
+                  <div class="flex items-center gap-2">
+                    <ul class="flex gap-2 text-xl">
+                      <li class="cursor-pointer" onclick="my_modal_1.showModal()" title="theme"><i class="ai-gear"></i>
+					</li>  
+                    </ul>
+                    <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">
+                      <span id="selectedLanguage">العربية</span>
+                      <i class="ai-chevron-down"></i>
+                    </div>
+                  </div>
+
+                  <ul tabindex="0" class="menu dropdown-content z-10 p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+						<li>
+							<a href="#" class="flex items-center" onclick="changeLanguage('English')"> <img class="h-5 w-5 ml-2" src="public/img/flag-usa.png" alt="English Flag">English</a>
+						</li> 
+						<li>
+							<a href="#" class="flex items-center" onclick="changeLanguage('Français')"> <img class="h-5 w-5 ml-2" src="public/img/flag-fr.png" alt="French Flag">Français</a>
+						</li>
+						<li>
+							<a href="#" class="flex items-center" onclick="changeLanguage('العربية')"> <img class="h-5 w-5 ml-2" src="public/img/flag-mo.png" alt="Arabic Flag">العربية</a>
+						</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="mt-3 px-2 md:px-6 flex justify-between items-center ">
+          <a href="index.html" class="flex page-link items-center gap-2 text-xl sm:text-3xl font-semibold">
+            <img class="w-10 sm:w-12" src="public/img/kisspng-e-commerce-computer-icons-shopping-cart-software-o-shopping-cart-5ac7d129bef211.9922103615230446497821.png" alt="">
+            Freshcart
+          </a>
+          <div class="grow px-10">
+              <label class="input input-bordered hidden md:flex items-center gap-2">
+                <input type="text" class="grow" placeholder="بحت" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" /></svg>
+              </label>
+          </div>
+          <ul class="flex gap-2 text-xl items-center  ">
+			<li class="cursor-pointer lg:hidden ">
+					<div class="drawer-content">
+					  <!-- Page content here -->
+					  <label for="my-drawer"><i class="ai-settings-horizontal cursor-pointer"></i></label>
+					</div>
+				<div class="drawer z-50"> 
+					<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+					<div class="drawer-side">
+					  <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+					  <ul class=" p-4 w-80 min-h-full bg-base-200 text-base-content">
+						<!-- Sidebar content here -->
+						<li>
+							<a href="index.html" class="flex items-center gap-2 text-2xl sm:text-3xl font-semibold">
+								<img class="w-12" src="public/img/kisspng-e-commerce-computer-icons-shopping-cart-software-o-shopping-cart-5ac7d129bef211.9922103615230446497821.png" alt="">
+								Freshcart
+							</a>
+						</li>
+						<li>
+							<div class=" mt-3 flex flex-col items-center justify-center gap-3">
+								<a href="store.html" class="btn btn-wide"><i class="text-lg ai-command"></i> جميع المنتجات</a>
+								<div >
+									<label class="input input-bordered flex items-center gap-2">
+									  <input type="text" class="grow" placeholder="بحت">
+									  <i class="ai-search"></i>
+									</label>
+								</div>
+								<ul class="menu w-full grow bg-base-200 lg:menu-horizontal rounded-box ">
+									<li>
+									  <a href="index.html">
+										<i class="text-lg ai-home-alt1"></i> الرئسية
+										<span class="badge badge-sm">99+</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="store.html">
+										<i class=" text-lg ai-sparkles"></i> احدت المنتجات
+										<span class="badge badge-sm badge-warning">NEW</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="store.html?product=mens&womens">
+										<i class="text-lg ai-people-multiple"></i> رجال ونساء
+										<span class="badge badge-xs badge-info"></span>
+									  </a>
+									</li>
+									<li>
+										<a href="store.html?product=electronic">
+											<i class="text-lg ai-telescope"></i> الالكترونيات
+										  	<span class="badge badge-xs badge-primary"></span>
+										</a>
+									</li>
+									<li>
+										<a href="about.htlm">
+											<i class="text-lg ai-info"></i> عنا
+										  <span class="badge badge-xs bg-accent"></span>
+										</a>
+									</li>
+									<li>
+										<a href="contact.html">
+											<i  class="text-lg ai-chat-add"></i> تواصل معنا
+										  	<span class="badge badge-xs bg-orange-600"></span>
+										</a>
+									</li>
+								  </ul>
+							</div>
+						</li>
+						<li class="text-center mt-3">
+							<div class="divider"></div>
+							<h1 class="text-sm font-semibold">تابعنا على مواقع التواصل الاجتماعي</h1>
+							<ul class="menu menu-horizontal bg-base-200 rounded-box text-lg">
+								<li>
+								  <a title="يوتيب">
+									<i class="ai-youtube-fill"></i>
+								  </a>
+								</li>
+								<li>
+									<a title="وتساب">
+									  <i class="ai-whatsapp-fill"></i>
+									</a>
+								  </li>
+								<li>
+								  <a title="انستغرام">
+									<i class="ai-instagram-fill"></i>
+								  </a>
+								</li>
+								<li>
+								  <a title="فيسبوك">
+									<i class="ai-facebook-fill"></i>
+								  </a>
+								</li>
+							  </ul>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</li>
+              <li class="cursor-pointer"><a href="wishlist.html" class="page-link"><i class="ai-heart"></i><sup class="px-1 font-bold">2</sup></a></li>
+              <li class="cursor-pointer"><a href="cart.html" class="page-link"><i class="ai-cart"></i><sup class="px-1 font-bold">7</sup></a></li>
+			  <div class="dropdown dropdown-end">
+				<div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+				  <div class="w-10 rounded-full">
+					<img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+				  </div>
+				</div>
+				<ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[44] p-2 shadow bg-base-100 rounded-box w-52">
+				  <li>
+					<a class="justify-between page-link" href="profile.html">
+						<span class="badge bg-warning">جديد</span>
+					  الملف الشخصي<i class="ai-person"></i>
+					</a>
+				  </li>
+				  <li dir="rtl"><a > <i class="ai-settings-vertical"></i>الاعدادات</a></li>
+				  <li dir="rtl"><a> <i class="ai-sign-out"></i> تسجيل الخروج</a></li>
+				</ul>
+			  </div>
+          </ul>
+        </div>
+        <div class="mt-3 px-6 hidden lg:flex items-center gap-3 justify-between">
+			<a href="store.html" class="btn btn-wide page-link"><i class="text-lg ai-command"></i> جميع المنتجات</a>
+			<ul class="menu grow bg-base-200 lg:menu-horizontal rounded-box ">
+				<li>
+				  <a href="index.html" class="page-link">
+					<i class="text-lg ai-home-alt1"></i> الرئسية
+					<span class="badge badge-sm">99+</span>
+				  </a>
+				</li>
+				<li>
+				  <a href="store.html" class="page-link">
+					<i class=" text-lg ai-sparkles"></i> احدت المنتجات
+					<span class="badge badge-sm badge-warning">NEW</span>
+				  </a>
+				</li>
+				<li>
+				  <a href="store.html?product=mens&womens" class="page-link">
+					<i class="text-lg ai-people-multiple"></i> رجال ونساء
+					<span class="badge badge-xs badge-info"></span>
+				  </a>
+				</li>
+				<li>
+					<a href="store.html?product=electronics" class="page-link">
+						<i class="text-lg ai-telescope"></i> الالكترونيات
+					  <span class="badge badge-xs badge-primary"></span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html" class="page-link">
+						<i class="text-lg ai-info"></i> عنا
+					  <span class="badge badge-xs bg-accent"></span>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html" class="page-link">
+						<i class="text-lg ai-chat-add"></i> تواصل معنا
+					  <span class="badge badge-xs bg-orange-600"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="divider"></div> 
+    </header>		
+    <section>
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">! تواصل معنا</h1>
+                <p class="py-6">نحن هنا لنستمع إليك ونقدم لك الدعم اللازم. يسعدنا تلقي استفساراتك، ملاحظاتك، واقتراحاتك. دعنا نبني جسور التواصل معكم، لنكون على تواصل دائم وفعّال.
+
+                    لا تتردد في مشاركة أفكارك ومخاوفك، فنحن هنا لخدمتك بكل اهتمام واحترافية. نحن في انتظار رسائلك، فلا تتردد في التواص</p>
+              </div>
+              <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">الاسم</span>
+                        </label>
+                        <input type="text" placeholder="الاسم الكامل" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                        <span class="label-text">البريد الالكتروني</span>
+                        </label>
+                        <input type="email" placeholder="البريد" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">الهاتف</span>
+                        </label>
+                        <input type="number" placeholder="+212600000000" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">الرسالة</span>
+                        </label>
+                        <textarea class="textarea textarea-bordered" placeholder="رسالتك" required></textarea>
+                    </div>
+                  <div class="form-control mt-6">
+                    <button class="btn btn-sm md:btn-md btn-primary">ارسال <i class="ai-send"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
+    <footer class="footer mt-6 p-10 bg-base-200 text-base-content">
+		<nav>
+		  <h6 class="footer-title">Services</h6> 
+		  <a class="link link-hover">Branding</a>
+		  <a class="link link-hover">Design</a>
+		  <a class="link link-hover">Marketing</a>
+		  <a class="link link-hover">Advertisement</a>
+		</nav> 
+		<nav>
+		  <h6 class="footer-title">Company</h6> 
+		  <a class="link link-hover">About us</a>
+		  <a class="link link-hover">Contact</a>
+		  <a class="link link-hover">Jobs</a>
+		  <a class="link link-hover">Press kit</a>
+		</nav> 
+		<nav>
+		  <h6 class="footer-title">Legal</h6> 
+		  <a class="link link-hover">Terms of use</a>
+		  <a class="link link-hover">Privacy policy</a>
+		  <a class="link link-hover">Cookie policy</a>
+		</nav> 
+		<form>
+		  <h6 class="footer-title">Newsletter</h6> 
+		  <fieldset class="form-control w-80">
+			<label class="label">
+			  <span class="label-text">Enter your email address</span>
+			</label> 
+			<div class="join">
+			  <input type="text" placeholder="username@site.com" class="input input-bordered join-item" /> 
+			  <button class="btn btn-primary join-item">Subscribe</button>
+			</div>
+		  </fieldset>
+		</form>
+	</footer>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_1" class="modal" dir="rtl">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">!مرحبا</h3>
+          <p class="py-4">اختر من بين تشكيلة رائعة من التيمات التي تناسب دوقك</p>
+          <div class="dropdown">
+              <ul class="flex justify-between">
+                <li>
+                  <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Default" value="default" onclick="changeTheme('default')" />
+              </li>
+                <li>
+                  <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="synthwave" value="synthwave" onclick="changeTheme('synthwave')" /></li>
+                <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="dim" value="dim" onclick="changeTheme('dim')" /></li>
+                <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="garden" value="garden" onclick="changeTheme('garden')" /></li>
+                <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="valentine" value="valentine" onclick="changeTheme('valentine')" /></li>
+              </ul>
+            </div>
+            
+            
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">اغلاق</button>
+            </form>
+          </div>
+        </div>
+    </dialog>
+	<!-- الشاشة المضلمة -->
+	<div class="overlay"></div>
+
+	<!-- الـ spinner -->
+	<div id="spinner">
+		<span class="loading loading-infinity text-info loading-lg"></span>
+	</div>
+    <!-- js link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="public/js/script.js"></script>
+</body>
+</html>
